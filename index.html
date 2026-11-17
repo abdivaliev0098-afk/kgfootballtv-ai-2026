@@ -1,109 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="ky">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KGFOOTBALLTV AI</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#080d18;color:#fff;font-family:Arial,sans-serif}
-header{padding:22px 18px;background:#101a2c;border-bottom:1px solid #243653}
-.logo{font-size:23px;font-weight:900;color:#48a5ff}
+body{margin:0;background:#080d18;color:white;font-family:Arial,sans-serif}
+header{background:#101a2c;padding:20px;border-bottom:1px solid #29476d}
+.logo{font-size:24px;font-weight:900;color:#48a5ff}
 .logo span{color:#ff4545}
-header p{color:#9eabc0;font-size:13px;margin-bottom:0}
-main{max-width:950px;margin:auto;padding:22px 16px}
-h2{font-size:21px}
-.welcome{background:linear-gradient(120deg,#142d50,#101525);padding:24px;border-radius:16px;border:1px solid #29476d}
-.welcome h1{font-size:25px;margin:0 0 10px}
-.welcome p{color:#bdc9dc;line-height:1.5}
-.tag{color:#58adff;font-size:12px;font-weight:bold}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
-.card{background:#111b2c;border:1px solid #253651;border-radius:14px;padding:19px}
-.card .icon{font-size:27px}
-.card h3{margin:12px 0 7px}
-.card p{font-size:13px;color:#aab7ca;line-height:1.5}
-button{background:#1677e8;color:white;border:0;border-radius:9px;padding:12px 16px;font-weight:bold;cursor:pointer;width:100%;margin-top:10px}
-button:hover{background:#3292ff}
-textarea,input{width:100%;background:#080f1d;color:white;border:1px solid #34445f;border-radius:9px;padding:13px;margin-top:10px;font-size:14px}
-textarea{min-height:110px;resize:vertical}
-.result{white-space:pre-wrap;color:#cbd8ec;font-size:14px;line-height:1.6;margin-top:12px}
-footer{text-align:center;padding:25px;color:#71819a;font-size:12px}
+header p{color:#9eabc0;font-size:13px}
+main{max-width:850px;margin:auto;padding:18px}
+.hero,.card{background:#111b2c;border:1px solid #253651;border-radius:15px;padding:19px;margin-bottom:16px}
+.hero{background:linear-gradient(120deg,#142d50,#101525)}
+h1{font-size:24px}
+h2{font-size:19px}
+p{color:#aab7ca;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{background:#1677e8;color:white;border:0;border-radius:9px;padding:13px;font-weight:bold;width:100%;margin-top:10px}
+button:active{background:#3292ff}
+textarea,select{width:100%;background:#080f1d;color:white;border:1px solid #34445f;border-radius:9px;padding:13px;margin-top:10px;font-size:15px}
+textarea{min-height:140px}
+.result{background:#080f1d;border-radius:9px;padding:13px;margin-top:12px;white-space:pre-wrap;line-height:1.6;overflow-wrap:anywhere}
+.small{font-size:12px;color:#8192aa}
+footer{text-align:center;color:#71819a;padding:25px;font-size:12px}
+@media(max-width:420px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">KG<span>FOOTBALL</span>TV AI</div>
-  <p>Кыргыз футбол контенти үчүн жасалма интеллект студиясы</p>
+ <div class="logo">KG<span>FOOTBALL</span>TV AI</div>
+ <p>Кыргыз футбол контенти үчүн AI студиясы</p>
 </header>
 
 <main>
-  <section class="welcome">
-    <div class="tag">AI FOOTBALL CONTENT STUDIO</div>
-    <h1>Футбол контентиңди бир жерден башкар!</h1>
-    <p>Жаңылыктарды котор, Reels сценарийлерин даярда жана футбол контентин түз.</p>
-  </section>
+ <section class="hero">
+  <h1>⚽ Футбол контентиңди даярда!</h1>
+  <p>Жаңылыктар, кыргызча котормо жана Instagram Reels сценарийлери.</p>
+ </section>
 
-  <h2>⚡ Башкы бөлүмдөр</h2>
-  <section class="grid">
-    <div class="card">
-      <div class="icon">⚽</div>
-      <h3>Футбол жаңылыктары</h3>
-      <p>Футбол жаңылыктары менен иштөө бөлүмү.</p>
-      <button onclick="showSection('news')">Ачуу</button>
-    </div>
-    <div class="card">
-      <div class="icon">🎬</div>
-      <h3>Reels сценарийи</h3>
-      <p>Instagram үчүн кыска видео сценарийлер.</p>
-      <button onclick="showSection('reels')">Ачуу</button>
-    </div>
-    <div class="card">
-      <div class="icon">🌍</div>
-      <h3>Кыргызча котормо</h3>
-      <p>Футбол жаңылыктарын кыргызчага которуу.</p>
-      <button onclick="showSection('translate')">Ачуу</button>
-    </div>
-    <div class="card">
-      <div class="icon">📊</div>
-      <h3>Футбол аналитикасы</h3>
-      <p>Командалар жана оюнчулар тууралуу маалымат.</p>
-      <button onclick="showSection('stats')">Ачуу</button>
-    </div>
-  </section>
+ <section class="card">
+  <h2>🌍 Кыргызча котормо</h2>
+  <p>Орусча же башка тилдеги футбол жаңылыгын киргиз.</p>
+  <textarea id="news" placeholder="Футбол жаңылыгын бул жерге киргиз..."></textarea>
+  <button onclick="prepareTranslation()">Которууга даярдоо</button>
+  <div id="translation" class="result">Которула турган текст ушул жерде көрсөтүлөт.</div>
+  <button onclick="copyResult('translation')">Текстти көчүрүү</button>
+ </section>
 
-  <section class="card" id="workspace" style="margin-top:22px">
-    <h2 id="sectionTitle">🚀 Иш баштоо</h2>
-    <p id="sectionDescription">Керектүү бөлүмдү танда.</p>
-    <textarea id="content" placeholder="Футбол жаңылыгын же темаңызды бул жерге жазыңыз..."></textarea>
-    <button onclick="copyText()">Текстти көчүрүү</button>
-    <div class="result" id="result"></div>
-  </section>
+ <section class="card">
+  <h2>🎬 Reels сценарийи</h2>
+  <textarea id="topic" placeholder="Мисалы: Барселонанын акыркы жаңылыгы..."></textarea>
+  <button onclick="makeScript()">Сценарий түзүү</button>
+  <div id="script" class="result">Сценарий ушул жерде чыгат.</div>
+  <button onclick="copyResult('script')">Сценарийди көчүрүү</button>
+ </section>
+
+ <section class="card">
+  <h2>📰 Посттун аталышы</h2>
+  <textarea id="headline" placeholder="Жаңылыкты киргиз..."></textarea>
+  <button onclick="makeHeadline()">Аталыш даярдоо</button>
+  <div id="headlineResult" class="result"></div>
+  <button onclick="copyResult('headlineResult')">Көчүрүү</button>
+ </section>
+
+ <section class="card">
+  <h2>📊 KGFOOTBALLTV</h2>
+  <p>Кийинки этаптар: футбол жаңылыктарын автоматтык алуу, оюн статистикасы, AI котормо жана видео генератор.</p>
+  <p class="small">Азыркы версия — интерфейс жана жергиликтүү текст куралдары. Чыныгы AI функциялары сервер туташкандан кийин иштейт.</p>
+ </section>
 </main>
 
-<footer>KGFOOTBALLTV AI · Football content studio</footer>
+<footer>KGFOOTBALLTV AI · 2026</footer>
 
 <script>
-const sections={
- news:["⚽ Футбол жаңылыктары","Бул жерге футбол жаңылыгын киргиз."],
- reels:["🎬 Reels сценарийи","Видео үчүн темаңызды жазыңыз."],
- translate:["🌍 Кыргызча котормо","Которула турган текстти киргиз."],
- stats:["📊 Футбол аналитикасы","Команда же оюнчу тууралуу суроо жазыңыз."]
-};
-function showSection(name){
- document.getElementById("sectionTitle").textContent=sections[name][0];
- document.getElementById("sectionDescription").textContent=sections[name][1];
- document.getElementById("content").value="";
- document.getElementById("result").textContent="Бул бөлүмдүн AI функциясын кийинки этапта туташтырабыз.";
- document.getElementById("workspace").scrollIntoView({behavior:"smooth"});
+function prepareTranslation(){
+ const text=document.getElementById("news").value.trim();
+ document.getElementById("translation").textContent=
+ text ? "Которууга даяр текст:\n\n"+text+"\n\nAI котормосун иштетүү үчүн коопсуз сервердик туташуу талап кылынат." :
+ "Адегенде футбол жаңылыгын киргиз.";
 }
-function copyText(){
- const value=document.getElementById("content").value;
- if(!value){alert("Адегенде текст жазыңыз");return;}
+function makeScript(){
+ const topic=document.getElementById("topic").value.trim();
+ document.getElementById("script").textContent=topic ?
+ "🎬 КИРИШҮҮ (0–3 сек.)\nБул жаңылык футбол дүйнөсүн дүрбөлөңгө салды!\n\n🎙 НЕГИЗГИ БӨЛҮК (3–30 сек.)\n"+topic+"\n\n🔥 ЖЫЙЫНТЫК (30–40 сек.)\nСенин оюң кандай? Комментарийге жаз!\n\nKGFOOTBALLTV'ге каттал!" :
+ "Адегенде видео темасын киргиз.";
+}
+function makeHeadline(){
+ const text=document.getElementById("headline").value.trim();
+ document.getElementById("headlineResult").textContent=text ?
+ "⚡ ФУТБОЛДО КҮТҮЛБӨГӨН ЖАҢЫЛЫК!\n\n"+text :
+ "Адегенде жаңылыкты киргиз.";
+}
+function copyResult(id){
+ const text=document.getElementById(id).textContent;
  if(navigator.clipboard){
- navigator.clipboard.writeText(value).then(()=>alert("Текст көчүрүлдү"));
+  navigator.clipboard.writeText(text).then(()=>alert("Көчүрүлдү!"));
  }else{
- alert("Текстти кол менен белгилеп көчүрүңүз");
+  alert("Текстти белгилеп көчүрүңүз.");
  }
 }
 </script>
